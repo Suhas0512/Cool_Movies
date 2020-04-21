@@ -11,6 +11,7 @@ function App(props) {
   const handleLogout = () => {
     Swal.fire({
       title: 'Are you sure?',
+      text: "You will logged out",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
@@ -20,6 +21,7 @@ function App(props) {
       if (result.value) {
         Swal.fire(
           'Logged Out',
+          'You have been logged out.',
           'success'
         )
         props.dispatch(startLogout())

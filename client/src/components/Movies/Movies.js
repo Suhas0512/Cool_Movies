@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {startAddDepartment} from '../../actions/departmentsAction'
-class DepartmentForm extends React.Component{
+import { startAddMovies } from '../../actions/moviesAction'
+class MoviesForm extends React.Component{
     constructor(){
         super()
         this.state={
@@ -18,7 +18,7 @@ class DepartmentForm extends React.Component{
         const formData={
             name:this.state.name
         }
-        this.props.dispatch(startAddDepartment(formData))
+        this.props.dispatch(startAddMovies(formData))
     }
     render(){
         return(
@@ -36,4 +36,4 @@ class DepartmentForm extends React.Component{
     }
 }
 
-export default connect()(DepartmentForm)
+export default connect()(MoviesForm)

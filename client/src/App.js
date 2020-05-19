@@ -7,6 +7,7 @@ import Account from './components/auth/Account'
 import Swal from 'sweetalert2';
 import { startLogout } from './actions/userAction';
 import Movies from './components/Movies/MovieSearch';
+import MoviesList from './components/Movies/MoviesList';
 
 function App(props) {
   const handleLogout = () => {
@@ -73,6 +74,7 @@ function App(props) {
       <Route path="/movies" component={Movies}></Route>
       <Route path="/users/register" component={Register}></Route>
       <Route path="/users/account" component={Account}></Route>
+      {Object.keys(props.user).length>0 && <Route path="/" component={MoviesList} exact={true}></Route>}
       </Switch>
       
     </div>

@@ -5,12 +5,6 @@ const moviesSchema = new Schema({
     title:{
         type:String,
         required:true
-    },
-    reviews:{
-        type:Schema.Types.ObjectId,ref:"Reviews"
-    },//subdocument
-    genre:{
-        type:Schema.Types.ObjectId,ref:"Genre"
     }
 })
 //model

@@ -6,6 +6,7 @@ import Login from './components/auth/Login'
 import Account from './components/auth/Account'
 import Swal from 'sweetalert2';
 import { startLogout } from './actions/userAction';
+import Movies from './components/Movies/MovieSearch';
 
 function App(props) {
   const handleLogout = () => {
@@ -55,7 +56,7 @@ function App(props) {
             <a className="navbar-brand">Best Movies</a>
             <ul className="navbar-nav ml-auto">
             <li className="nav-item active">
-            <Link className="nav-link" to="">Home</Link></li>
+            <Link className="nav-link" to="/movies">Search Movies</Link></li>
             <li className="nav-item active">
             <Link className="nav-link" to="/users/account">account</Link></li>
             <li className="nav-item active">
@@ -69,6 +70,7 @@ function App(props) {
       
       <Switch>
       <Route path="/users/login" component={Login}></Route>
+      <Route path="/movies" component={Movies}></Route>
       <Route path="/users/register" component={Register}></Route>
       <Route path="/users/account" component={Account}></Route>
       </Switch>
